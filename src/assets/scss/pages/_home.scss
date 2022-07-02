@@ -1,0 +1,647 @@
+$gapSection: 64px;
+$gapLg: 96px;
+$gapXl: 160px;
+
+.text-purple {
+  color: $purple;
+}
+
+.inputs-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-container.bottom {
+  margin: auto;
+
+  @include md {
+    margin: 0;
+  }
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  align-items: center;
+}
+
+.input-container {
+  position: relative;
+  height: 51px;
+  width: 270px;
+  border-radius: 4px;
+  border: solid 1px $purple;
+  display: flex;
+  align-items: center;
+
+  @include sm {
+    width: 286px;
+  }
+
+  .input-label {
+    position: absolute;
+    left: 8px;
+    top: -10px;
+    background: $white;
+    font-size: 12px;
+    color: #bdbdbd;
+    padding: 0 6px;
+  }
+
+  .input-text {
+    width: 286px;
+    text-indent: 16px;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+#hero {
+  height: 668px;
+  position: relative;
+  margin-bottom: $gapSection;
+
+  @include md {
+    height: 532.438px;
+  }
+
+  @include lg {
+    margin-bottom: $gapLg;
+  }
+
+  @include xl {
+    margin-bottom: $gapXl;
+    height: 668px;
+  }
+
+  .hero-img {
+    opacity: 0;
+    margin-top: 74px;
+
+    @include md {
+      opacity: 1;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 300px;
+      border-radius: 0 0 0px 100px;
+    }
+
+    @include xl {
+      width: 375px;
+      right: 70px;
+      border-radius: 0 0 0px 100px;
+    }
+
+    @include xl4 {
+      right: 120px;
+    }
+
+    @include xl-full {
+      right: 300px;
+    }
+  }
+
+  .hero-container {
+    position: absolute;
+    left: 50%;
+    // top: 74px;
+    top: 44px;
+    transform: translateX(-50%);
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 16px;
+
+    @include sm {
+      padding: 0 32px;
+    }
+
+    @include md {
+      flex-direction: row;
+      top: 147.25px;
+      align-items: center;
+    }
+
+    @include lg {
+      gap: 84px;
+      width: 976px;
+    }
+
+    @include xl {
+      margin-top: 50px;
+    }
+
+    .hero-text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .hero-title {
+        font-weight: 700;
+        text-align: center;
+        font-size: 24px;
+        font-family: $montserrat;
+
+        @include md {
+          text-align: left;
+        }
+
+        @include lg {
+          font-size: 28px;
+        }
+      }
+
+      .hero-subtitle {
+        text-align: center;
+        font-size: 20px;
+
+        @include md {
+          text-align: left;
+        }
+      }
+    }
+
+    .hero-form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: calc(100vw - 32px);
+      margin: auto;
+      padding: 32px 16px;
+
+      @include sm {
+        width: 350px;
+      }
+
+      @include md {
+        flex: none;
+      }
+
+      @include xl {
+        height: 331px;
+      }
+
+      align-items: center;
+      background: $white;
+      border: 1px $purple solid;
+      border-radius: 4px;
+
+      .form-title {
+        font-weight: 700;
+        font-size: 24px;
+        font-family: $montserrat;
+        color: $purple;
+      }
+
+      // INPUTS CONTAINER HERE
+
+      .enviar {
+        color: $white;
+        font-weight: 700;
+        font-size: 18px;
+        background: $purple;
+        padding: 8px 24px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+#servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: $gapSection;
+
+  @include lg {
+    margin-bottom: $gapLg;
+  }
+
+  @include xl {
+    margin-bottom: $gapXl;
+  }
+
+
+
+
+
+  .servicos-title {
+    font-weight: 700;
+    font-size: 28px;
+    font-family: $montserrat;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .servicos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+
+    @include sm {
+      gap: 64px;
+    }
+
+    @include lg {
+      gap: 0;
+      padding: 0 32px;
+      justify-content: space-between;
+    }
+
+    @include xl {
+      width: 1110px;
+      margin: auto;
+    }
+
+    .servico-container {
+      width: 231px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        height: 91px;
+      }
+
+      .servico-title {
+        margin-top: 16px;
+        font-family: $montserrat;
+        font-weight: 700;
+      }
+
+      .servico-text {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.secao-imagem {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  // max-width: 475px;
+  margin: auto;
+  margin-bottom: $gapSection;
+
+  @include sm {
+    padding: 0 32px;
+  }
+
+  @include md {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  @include lg {
+    gap: 48px;
+    margin-bottom: $gapLg;
+  }
+
+  @include xl {
+    width: 1110px;
+    gap: 84px;
+    padding: 0;
+    margin-bottom: $gapXl;
+  }
+
+  .imagem {
+    border-radius: 10px;
+    width: 100%;
+
+    @include sm {
+      border-radius: 0 50px 0 50px;
+
+      width: 475px;
+      height: 387px;
+    }
+
+    @include md {
+      width: 336px;
+      height: 273.75px;
+      flex: none;
+    }
+
+    @include lg {
+      border-radius: 0 100px 0 100px;
+      width: 474px;
+      height: 386px;
+    }
+  }
+
+  .secao-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include md {
+      gap: 24px;
+    }
+
+    .title-underline {
+      text-align: center;
+      position: relative;
+      font-weight: 700;
+      font-family: $montserrat;
+      font-size: 24px;
+      padding-bottom: 16px;
+
+      @include md {
+        padding-bottom: 12px;
+        text-align: left;
+      }
+
+      @include lg {
+        padding-bottom: 20px;
+        font-size: 28px;
+      }
+
+      &::after {
+        content: "";
+        width: 64px;
+        border-radius: 999px;
+        height: 3px;
+        background: $purple;
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+
+        @include md {
+          left: 0;
+          width: 100px;
+          transform: translateX(0%);
+        }
+      }
+    }
+
+    .desc {
+      text-align: center;
+      line-height: 31.5px;
+
+      @include md {
+        text-align: left;
+      }
+    }
+
+    .vamos-la {
+      font-weight: 700;
+      background: $purple;
+      padding: 8px 24px;
+      border-radius: 4px;
+      color: $white;
+      width: 124px;
+      text-align: center;
+      margin: auto;
+      font-size: 16px;
+
+      @include md {
+        margin: 0;
+      }
+    }
+  }
+}
+
+#faixa-secao {
+  background: $purple;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: $gapSection;
+
+  @include lg {
+    margin-bottom: $gapLg;
+  }
+
+  @include xl {
+    margin-bottom: $gapXl;
+  }
+
+  .faixa-texto {
+    padding: 0px 16px;
+    text-align: center;
+    color: $white;
+    font-weight: 700;
+    font-family: $montserrat;
+    font-size: 18px;
+
+    @include sm {
+      width: 500px;
+    }
+
+    @include md {
+      font-size: 24px;
+      width: 600px;
+    }
+
+    @include lg {
+      width: 765px;
+    }
+  }
+
+  .faixa-button {
+    width: auto;
+    color: $purple;
+    background: $white;
+    padding: 6px 18px;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+}
+
+.secao-imagem.contrario {
+  @include md {
+    .imagem {
+      order: 2;
+      border-radius: 100px 0 100px 0;
+    }
+
+    .secao-texto {
+      order: 1;
+    }
+  }
+}
+
+#faq {
+  margin-bottom: $gapSection;
+
+  @include lg {
+    margin-bottom: $gapLg;
+  }
+
+  @include xl {
+    margin-bottom: $gapXl;
+  }
+
+  .faq-title {
+    font-weight: 700;
+    font-size: 24px;
+    font-family: $montserrat;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .faq-lista {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    margin: auto;
+
+    @include sm {
+      padding: 0 32px;
+    }
+
+    @include lg {
+      width: 920px;
+    }
+
+    .faq-item {
+      padding: 24px 0px;
+      border-bottom: solid 1px #e0e0e0;
+
+      .faq-container {
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        .nome {
+          font-size: 20px;
+        }
+
+        .container-mais {
+          width: 28px;
+          height: 28px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .mais {
+            position: relative;
+            width: 28px;
+            height: 3px;
+            background: $purple;
+
+            &::after {
+              transition: 0.3s;
+              content: "";
+              position: absolute;
+              width: 28px;
+              height: 3px;
+              left: 0;
+              top: 0;
+
+              transform: rotate(90deg);
+
+              background: $purple;
+            }
+          }
+        }
+      }
+
+      .desc {
+        transition: 0.3s;
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+
+    .faq-item.active {
+      .faq-container {
+        .container-mais {
+          .mais {
+            &::after {
+              transform: rotate(0deg);
+            }
+          }
+        }
+      }
+      .desc {
+        max-height: 200px;
+        overflow-y: auto;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+// .faq-li {
+//   @apply py-4 flex justify-between items-center border-b border-faqgrey flex-wrap;
+// }
+
+// .faq-p {
+//   @apply font-light lg:text-title text-sub py-8;
+// }
+
+// .faq-desc {
+//   -ms-overflow-style: none; /* IE and Edge */
+//   scrollbar-width: none; /* Firefox */
+//   @apply duration-700
+//   w-full
+//   max-h-0 invisible overflow-y-hidden;
+// }
+
+// .faq-desc::-webkit-scrollbar {
+//   @apply hidden;
+// }
+
+// .faq-li.active .faq-desc {
+//   @apply 2xl:max-h-122
+//   lg:max-h-136
+//   sm:max-h-163
+//   max-h-192
+//   visible
+//   overflow-y-auto;
+// }
+
+// .faq-li .plus {
+//   height: 3px;
+//   @apply my-14
+//   w-14 bg-blue relative;
+// }
+
+// .faq-li .plus::after {
+//   height: 3px;
+//   content: "";
+//   @apply duration-500
+//   absolute
+//   left-0
+//   top-0
+//   rotate-90
+//   w-14 bg-blue;
+// }
+
+// .faq-li.active .plus::after {
+//   @apply rotate-0
+//   bg-transparent;
+// }
+
+// .click-area {
+//   @apply flex
+//   justify-between
+//   w-full
+//   cursor-pointer;
+// }

@@ -1,0 +1,77 @@
+section#hero
+  img.hero-img(src="assets/img/dentista-paciente.png" alt="$%")
+  .hero-container
+    article.hero-text-container
+      h1.hero-title 
+        | <span class="text-purple">Multiplicamos</span> o faturamento da sua <span class="text-purple">clínica odontológica</span> ou seu dinheiro de volta!
+      p.hero-subtitle Isso não é magica, isso aqui é marketing. Isso não é magica, isso aqui é marketing digital
+    form.hero-form
+      p.form-title Agende sua reunião
+      .inputs-container
+        .input-container
+          label.input-label(for="nome") Nome
+          input.input-text(type="text" name="nome" placeholder="Seu nome...")
+        .input-container
+          label.input-label(for="contato") Contato
+          input.input-text(type="text" name="contato" placeholder="Forma de contato...")
+      button.enviar(type="submit") Enviar
+section#servicos
+  h2.servicos-title Serviços
+  .servicos-lista
+    .servico-container
+      img(src="assets/img/icon-telefone.svg" alt="icone de telefone com aplicativos")
+      h3.servico-title Gestão de anúncio
+      p.servico-text Uma pequena descrição do serviço oferecido
+    .servico-container
+      img(src="assets/img/icon-network.svg" alt="icone de telefone com aplicativos")
+      h3.servico-title Gestão de mídias sociais
+      p.servico-text Uma pequena descrição do serviço oferecido
+    .servico-container
+      img(src="assets/img/icon-design.svg" alt="icone de telefone com aplicativos")
+      h3.servico-title Design gráfico
+      p.servico-text Uma pequena descrição do serviço oferecido
+section#porque.secao-imagem
+  img.imagem(src="assets/img/reuniao.png" alt="$$$")
+  article.secao-texto
+    h2.title-underline Por que contratar a GS Orion?
+    p.desc Porque com os serviços de presença online da GS Orion, colocaremos seu negócio nas primeiras posições da internet, para que todos os pacientes que estão procurando por dentistas próximos o encontrem primeiro.
+    button.vamos-la Vamos lá
+section#faixa-secao
+  p.faixa-texto Não deixe para marcar sua reunião depois, pois quem chega cedo no poço bebe agua fresca.
+  button.faixa-button Agende já sua reunião
+section#porque.secao-imagem.contrario
+  img.imagem(src="assets/img/reuniao.png" alt="$$$")
+  article.secao-texto
+    h2.title-underline Por que contratar a GS Orion?
+    p.desc Porque com os serviços de presença online da GS Orion, colocaremos seu negócio nas primeiras posições da internet, para que todos os pacientes que estão procurando por dentistas próximos o encontrem primeiro.
+    button.vamos-la Vamos lá
+section#porque.secao-imagem
+  img.imagem(src="assets/img/reuniao.png" alt="$$$")
+  article.secao-texto
+    h2.title-underline Por que contratar a GS Orion?
+    p.desc Porque com os serviços de presença online da GS Orion, colocaremos seu negócio nas primeiras posições da internet, para que todos os pacientes que estão procurando por dentistas próximos o encontrem primeiro.
+    button.vamos-la Vamos lá
+section#faq
+  h2.faq-title Dúvidas frequentes
+  ul.faq-lista
+    - for (var i = 0; i < 6; ++i) {
+    li.faq-item
+      .faq-container
+        h3.nome Tenho que marcar a reunião
+        .container-mais
+          .mais
+      p.desc <br>Aqui será uma descrição explicando a resposta para a pergunta e a aqui será uma descrição explicando a resposta para a pergunta.<br>
+    - }
+section#porque.secao-imagem.contrario
+  img.imagem(src="assets/img/reuniao.png" alt="$$$")
+  article.secao-texto
+    h2.title-underline Por que contratar a GS Orion?
+    p.desc Subtexto falando sobre agendar reunião, de certa forma um calll to action
+    .inputs-bottom
+      .input-container.bottom
+        label.input-label(for="nome") Nome
+        input.input-text(type="text" name="nome" placeholder="Seu nome...")
+      .input-container.bottom
+        label.input-label(for="contato") Contato
+        input.input-text(type="text" name="contato" placeholder="Forma de contato...")
+    button.vamos-la Vamos lá
