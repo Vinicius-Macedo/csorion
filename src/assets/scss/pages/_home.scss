@@ -511,10 +511,11 @@ $gapXl: 160px;
     }
 
     .faq-item {
-      padding: 24px 0px;
+
       border-bottom: solid 1px #e0e0e0;
 
       .faq-container {
+        padding: 24px 0px;
         display: flex;
         gap: 8px;
         justify-content: space-between;
